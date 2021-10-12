@@ -18,12 +18,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var rvItem : RecyclerView
     lateinit var itemList : ArrayList<String>
     lateinit var rvAdapter: RVAdapter
+    lateinit var bDel : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         bAdd = findViewById(R.id.bAdd)
+        bDel = findViewById(R.id.bDelUpd)
         rvItem = findViewById(R.id.rvItems)
         itemList = ArrayList()
 
@@ -39,6 +41,15 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        bDel.setOnClickListener {
+            val intent = Intent(this, DeleteUpdateActivity::class.java)
+            startActivity(intent)
+        }
+
+        rvAdapter.notifyDataSetChanged()
+
+
+
 
     }
 
@@ -53,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             ) {
                 var result: String? = ""
                 for (i in response.body()!!) {
-                    result = i.name +" \n"+ i.location
+                    result = i.name +" \n"+ i.location +"\n"+ i.pk
                     itemList.add(result!!)
                     rvAdapter.notifyDataSetChanged()
                 }

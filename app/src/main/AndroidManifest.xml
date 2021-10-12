@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PostRequestApp">
         <activity
+            android:name=".DeleteUpdateActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddActivity"
             android:exported="true" />
         <activity

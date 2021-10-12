@@ -27,6 +27,7 @@ class RVAdapter (val itemList : ArrayList<String>) : RecyclerView.Adapter<RVAdap
         holder.itemView.apply {
             for(i in itemList) {
                 tvName.text = items
+
             }
         }
     }

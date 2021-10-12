@@ -7,7 +7,15 @@ class Details {
 
     class Items() {
         var name: String? = null
-        val location: String? = null
+        var location: String? = null
+        var pk:Int? = null
+
+
+        constructor(name: String?, location:String? ,pk: Int? ) : this() {
+            this.name = name
+            this.location = location
+            this.pk = pk
+        }
 }
 
 }

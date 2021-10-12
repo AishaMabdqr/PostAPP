@@ -7,13 +7,23 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/bDelUpd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update/ Delete user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bAdd"/>
+
+    <Button
         android:id="@+id/bAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add New User"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bDelUpd"
         app:layout_constraintBottom_toTopOf="@+id/rvItems"
         />
 
